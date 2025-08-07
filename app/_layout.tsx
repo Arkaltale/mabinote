@@ -1,39 +1,53 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
+import { Slot } from 'expo-router';
+import { useFonts, NotoSansKR_400Regular } from '@expo-google-fonts/noto-sans-kr';
 import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { useEffect, useState } from 'react';
+import { View, Image } from 'react-native';
+import { RootSiblingParent } from 'react-native-root-siblings';
+import { useAutoReset  } from '../hooks/useAutoReset'; // ✅ 자동 초기화 유틸 불러오기
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  const [fontsLoaded] = useFonts({ NotoSansKR_400Regular });
+  const [splashVisible, setSplashVisible] = useState(true);
+
+  useAutoReset ('main'); // ✅ 메인 자동 초기화 실행
+  useAutoReset ('sub1'); // ✅ 서브1 자동 초기화 실행
+  useAutoReset ('sub2'); // ✅ 서브2 자동 초기화 실행
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
+    const init = async () => {
+      
 
-  if (!loaded) {
-    return null;
-  }
+      if (fontsLoaded) {
+        SplashScreen.hideAsync();
+        setTimeout(() => setSplashVisible(false), 2000);
+      }
+    };
+    init();
+  }, [fontsLoaded]);
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <RootSiblingParent>
+      <View style={{ flex: 1 }}>
+        <Slot />
+        {(!fontsLoaded || splashVisible) && (
+          <View style={{
+            position: 'absolute',
+            top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: '#000',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 100,
+          }}>
+            <Image
+              source={require('../assets/mabi-note-logo.png')}
+              style={{ width: 250, height: 250, resizeMode: 'contain' }}
+            />
+          </View>
+        )}
+      </View>
+    </RootSiblingParent>
   );
 }
