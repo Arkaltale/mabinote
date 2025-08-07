@@ -55,6 +55,19 @@ eas build --platform ios
 
 ---
 
+## 📱 앱 미리보기
+
+<p align="center">
+  <img src="https://github.com/Arkaltale/mabinote/blob/main/preview/preview_1.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Arkaltale/mabinote/blob/main/preview/preview_2.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Arkaltale/mabinote/blob/main/preview/preview_3.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Arkaltale/mabinote/blob/main/preview/preview_4.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Arkaltale/mabinote/blob/main/preview/preview_5.jpg?raw=true" width="30%" />
+  <img src="https://github.com/Arkaltale/mabinote/blob/main/preview/preview_7.jpg?raw=true" width="30%" />
+</p>
+
+---
+
 ## 📄 라이선스
 
 MIT License
