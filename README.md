@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+# 📘 MabiNote
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> 마비노기 모바일 스타일의 주간/일일 콘텐츠 체크 앱  
+> 개인 및 팀 단위의 콘텐츠 루틴 관리를 효율적으로 돕는 모바일 전용 유틸리티
 
-## Get started
+---
 
-1. Install dependencies
+## 🧩 주요 기능
 
-   ```bash
-   npm install
-   ```
+- ✅ **일일/주간 콘텐츠 체크**
+- ⭐ **즐겨찾기 등록 및 필터링**
+- ⏰ **자동 초기화 (매일/매주 자정)**
+- 🔍 **카테고리별 필터/정렬**
+- 🧼 **UI 애니메이션 및 전환 효과 적용**
+- 📱 **iOS/Android 양대 플랫폼 지원 (Expo 기반)**
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## ⚙️ 기술 스택
 
-In the output, you'll find options to open the app in a
+| 항목       | 기술/도구               |
+|------------|-------------------------|
+| 프레임워크 | React Native + Expo     |
+| 상태관리   | React Context / Hooks   |
+| 네비게이션 | Expo Router (v2)        |
+| 빌드       | EAS Build               |
+| 애니메이션 | react-native-reanimated, expo-router/stack |
+| 기타       | AsyncStorage, Gesture Handler 등 |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 설치 및 실행
 
-## Get a fresh project
-
-When you're ready, run:
+### 1. 의존성 설치
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. 개발 서버 실행
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. 빌드 (EAS)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+eas build --platform android
+# 또는
+eas build --platform ios
+```
 
-## Join the community
+> `.env`, `eas.json` 등은 필요 시 별도 구성
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📄 라이선스
+
+MIT License
+
+---
+
+## ✍️ 개발자
+
+- 조성진 [@github.com/Arkaltale](https://github.com/Arkaltale)
