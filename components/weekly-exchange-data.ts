@@ -1,5 +1,3 @@
-// 📁 weekly-exchange-data.ts (weeklyExchangeItems with region)
-
 import { ExchangeEntry } from './exchange-data';
 
 export const weeklyExchangeItems: ExchangeEntry[] = [

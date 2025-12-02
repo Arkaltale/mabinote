@@ -1,4 +1,3 @@
-// 📁 components/ContentList.tsx (자동 초기화 제거)
 import React, { useEffect, useState, useCallback } from 'react';
 import {
   View,

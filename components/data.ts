@@ -1,5 +1,3 @@
-// 📁 data.ts (ChecklistGroup 구조 적용)
-
 export type ChecklistGroup = {
     title: string;
     items: string[];

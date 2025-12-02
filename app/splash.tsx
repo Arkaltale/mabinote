@@ -16,7 +16,7 @@ export default function SplashScreen() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/splash-icon.png')} // PNG 파일 위치
+        source={require('../assets/images/splash-icon.png')}
         style={{ width: 200, height: 200, resizeMode: 'contain' }}
       />
     </View>

@@ -1,4 +1,3 @@
-// 📁 components/ChecklistList.tsx (즐겨찾기 기능 + 필터 대응)
 import React from 'react';
 import {
   View,

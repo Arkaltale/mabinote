@@ -4,7 +4,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import { View, Image } from 'react-native';
 import { RootSiblingParent } from 'react-native-root-siblings';
-import { useAutoReset  } from '../hooks/useAutoReset'; // ✅ 자동 초기화 유틸 불러오기
+import { useAutoReset  } from '../hooks/useAutoReset';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -12,9 +12,9 @@ export default function RootLayout() {
   const [fontsLoaded] = useFonts({ NotoSansKR_400Regular });
   const [splashVisible, setSplashVisible] = useState(true);
 
-  useAutoReset ('main'); // ✅ 메인 자동 초기화 실행
-  useAutoReset ('sub1'); // ✅ 서브1 자동 초기화 실행
-  useAutoReset ('sub2'); // ✅ 서브2 자동 초기화 실행
+  useAutoReset ('main'); 
+  useAutoReset ('sub1');
+  useAutoReset ('sub2'); 
 
   useEffect(() => {
     const init = async () => {

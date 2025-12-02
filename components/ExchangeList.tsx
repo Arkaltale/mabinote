@@ -1,4 +1,3 @@
-// 📁 components/ExchangeList.tsx (즐겨찾기 기능 포함)
 import React from 'react';
 import {
   View,

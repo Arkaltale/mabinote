@@ -1,5 +1,3 @@
-// 📁 exchange-data.ts (dailyExchangeItems with region)
-
 export type ExchangeEntry = {
   npc: string;
   region: string;
